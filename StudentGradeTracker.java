@@ -54,7 +54,7 @@ public class StudentGradeTracker extends JFrame {
         nameField = new JTextField();
         inputPanel.add(nameField);
 
-        inputPanel.add(new JLabel("Grade:"));
+        inputPanel.add(new JLabel("Marks (0-100):"));
         gradeField = new JTextField();
         inputPanel.add(gradeField);
 
@@ -139,7 +139,7 @@ public class StudentGradeTracker extends JFrame {
             sb.append("No students added yet.\n");
         } else {
             for (Student student : studentList) {
-                sb.append(String.format("- %-20s Grade: %6.2f%n", student.getName(), student.getGrade()));
+                sb.append(String.format("- %-20s Marks(0-100): %6.2f%n", student.getName(), student.getGrade()));
             }
         }
         displayArea.setText(sb.toString());
